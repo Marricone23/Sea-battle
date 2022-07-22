@@ -5,6 +5,21 @@
     src: url('../fonts/pixar-one-707.otf') format("opentype");;
 }
 
+*{
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+.gamezone { 
+    padding: 0px;	
+    margin: 0 auto;
+}
+
 .ship {
     /*z-index: 2;*/
     position: absolute;
@@ -114,12 +129,11 @@ position: absolute;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999999;
+    transform: translate(-50%, -50%);   
     background: rgba(255, 255, 255, 0.67);
     padding: 40px;
     border-radius: 5px;
-    width: 500px;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -127,6 +141,8 @@ position: absolute;
 
 .start-game-panel h2 {
     font-size: 30px;
+    align-self: center;
+    max-width: 50%;
 }
 
 .start-game-panel input {
@@ -134,7 +150,7 @@ position: absolute;
     color:red;
     padding: 10px;
     border: 2px solid #afafaf;
-    margin-left: 110px;
+    align-self: center;
     border-radius: 3px;
     width: 50%;
 }
@@ -156,6 +172,8 @@ position: absolute;
     color:darkred;
     border: none;
     cursor: pointer;
+    align-self: center;
+    max-width: 70%;
 }
 
 .controll {
@@ -165,8 +183,9 @@ position: absolute;
 
 .controll-content{
     display: none;
+    flex-direction: column;
     position: relative;
-    z-index: 999999;
+    
 
 }
 
@@ -255,21 +274,20 @@ position: absolute;
 .game-over-info > a {
     color: #ffffff;
 }
-.background-see {
-    z-index: 0;
+.background-see {  
     background:url(../img/okean.png) no-repeat;
     background-position: top;
-    background-size: 100% 100%;
-    width: 1300px;
-    height: 440px; 
+   background-size: 100% 100%;
+    max-width: 100%;
+    min-height: 75vh; 
 } 
 
-.background-sky {
+.background-sky {    
     background: url(../img/bluesky.png) no-repeat;
     background-position: top;
-    background-size: 100% 100%;
-    width: 1300px;
-    height: 250px; 
+   background-size: 100% 100%;
+    max-width: 100%;
+    min-height: 27.5vh; 
 
 }     
 

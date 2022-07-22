@@ -10,13 +10,13 @@
     </head>
 
     <body class="gamezone">
-        <!--<div class="blow"><img src ="img/2a9n.gif"></div>--> 
-        <!--<canvas id="canvas" width="1200" height="800"></canvas>--> 
+
         <div class = "info">
-            <span class = "player-name">Имя игрока: <span class ="inner-name"></span> </span>
+            <span class = "player-name">Имя игрока: <span class ="inner-name" id="name"> имя </span> </span>
             <span class = "points"> Очки:<span class ="inner-points">0</span> </span>
         </div>
-         <div class="life-progress">     
+
+        <div class="life-progress">     
             <div class="ship-life1"><img src = "img/heart-1.png" ></div>
             <div class="ship-life2"><img src = "img/heart-1.png" ></div>
             <div class="ship-life3"><img src = "img/heart-1.png" ></div>
@@ -34,28 +34,27 @@
                   <li>Движение право "▶"</li>
                 </ul>   
             </div>
-
             <p>Player name:</p> 
-            <input type = "text" name = "firstName" class = "name-imput">
-            <button class = "start-btn" onclick="startGame()">Start</button>
+              <input type = "text" name = "firstName" class = "name-imput" placeholder="введите имя"></input>
+              <button class = "start-btn" onclick="startGame()">Start</button>
             </div>
         </div>
+
         <div class="game-over">
             <div class="game-over-info">
                 <span>Game Over</span>
-        
-                <table class="results">
-        
-                </table>
-        
+                <table class="results">        
+                </table>        
                 <a href="#" onclick="game()">Restart Game</a>
             </div>
         </div>
+
         <div class="victory">
             <div class ="text-victory">
                 <span>VICTORY</span>
-      </div>
-       </div>   
+        </div>
+        </div>  
+
         <div class ="background-sky"></div>
         <div class ="background-see"></div>
                 

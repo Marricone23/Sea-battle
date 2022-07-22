@@ -16,7 +16,7 @@ document.querySelector(".ship-life4").classList.remove('on');
 
 function calc(){
     let num = document.querySelector('.inner-points');
-     num.innerText = points+pointss+pointsss;
+     num.innerHTML = points+pointss+pointsss;
      num++;
   }
 
@@ -320,7 +320,7 @@ ints.sub3 = setInterval(()=>{
                   }
             });
 
-            if(sub3.getBoundingClientRect().left >= 1125){
+            if(sub3.getBoundingClientRect().left >= 1125 ){
                 sub3.style.left = '50px';
             } else {sub3.style.left = sub3.getBoundingClientRect().left + 5 + "px";}                               
         }); 
@@ -376,9 +376,25 @@ function startGame(){
     document.querySelector('.start-game').classList.remove('on');
     game();
     calc();
+    writeName ();
     
 }
 
+function writeName (event) {
+    let getName = document.querySelector('.inner-name');
+    let inputName = document.querySelector('input').value;
+    let startButton = document.querySelector('.start-btn');
+    startButton.addEventListener('click',(event) => { 
+        getName.innerHTML = inputName.value;
+        console.log('name')
+    }
+    )    
+       
+   
+}
+
+
+writeName ();
 
 
 let bgsky = document.querySelector(".gamezone"),
@@ -386,9 +402,11 @@ fps = 1000/5,
 points =0,
 pointss =0,
 pointsss =0,
+
 player = {
     name: ''
 },
+
 ship1 = {
         sprites:{
             left:'img/ship1.png',
